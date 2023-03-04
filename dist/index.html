@@ -4,7 +4,44 @@
     <meta charset="utf-8" />
     <title>JavaScript Practice</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <script defer="defer" src="index.bundle.js"></script>
-  </head>
-  <body></body>
+  <script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script><script defer src="menu.bundle.js"></script></head>
+  <body>
+    <header>
+      <div id="menu">
+        <div class="menu-title-container">
+          <ul class="menu-options">
+            <li class="menu-title menu-option"><a href="#">Accessories</a></li>
+          </ul>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-chevron-left"
+          >
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </div>
+        <div class="drop-down-container">
+          <ul class="menu-options">
+            <li class="menu-option" data-id="1">
+              <a href="#">Browse Books</a>
+            </li>
+            <li class="menu-option" data-id="2">
+              <a href="#">Special Values</a>
+            </li>
+            <li class="menu-option" data-id="3">
+              <a href="#">Special Collections</a>
+            </li>
+            <li class="menu-option" data-id="4"><a href="#">Subjects</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+  </body>
 </html>
