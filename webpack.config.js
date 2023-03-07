@@ -6,17 +6,18 @@ module.exports = {
   entry: {
     index: './src/index.js',
     menu: './src/menu.js',
+    carousel: './src/carousel.js',
   },
   devtool: 'inline-source-map',
   devServer: {
     static: {
-			directory: path.join(__dirname, './dist'),
-		},
+      directory: path.join(__dirname, './dist'),
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'JavaScript Practice',
-			template: "./src/index.html",
+      template: './src/index.html',
     }),
   ],
   output: {

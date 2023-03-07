@@ -1,0 +1,27 @@
+main {
+  position: absolute;
+	top: 25%;
+	left: calc(50% - 170px);
+}
+
+img {
+  height: 300px;
+  width: 300px;
+  padding: 0 20px;
+}
+
+#carousel-slider {
+  position: absolute;
+  display: flex;
+  left: 0;
+  transition: all 0.5s ease-in;
+}
+
+#carousel-frame {
+  position: relative;
+  align-items: center;
+  width: 340px;
+  height: 300px;
+  border: 2px solid rgb(79, 79, 79);
+  overflow: hidden;
+}
