@@ -29,4 +29,5 @@ img {
 .arrow {
 	font-size: 2rem;
 	padding: 5px;
+	cursor: pointer;
 }
