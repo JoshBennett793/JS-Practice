@@ -1,19 +1,25 @@
- <!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>JavaScript Practice</title>
-	 <script src = "script.js" defer></script>
-</head>
-<body>
-  <h1>
-    THE TITLE OF YOUR WEBPAGE
-  </h1>
-  <div id="container"></div>
-    <button id="1">Click Me</button>
-    <button id="2">Click Me</button>
-    <button id="3">Click Me</button>
-</body>
-</html>  
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RPS</title>
+    <script src="script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+		<link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <form novalidate>
+      <p>
+				<label for="mail">
+					<span>Please enter an email address:</span>
+					<input type="email" name="mail" id="mail" required minlength="8" />
+					<span class="error" aria-live="polite"></span>
+				</label>
+			</p>
+			<button>Submit</button>
+    </form>
+  </body>
+</html>
