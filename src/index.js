@@ -1,39 +1,41 @@
-import './style.css';
+let isMomHappy = true;
 
-
-const form = document.querySelector('form');
-const email = document.getElementById('mail');
-const emailError = document.querySelector('#mail + span.error');
-const emailIsValid = email.value.length === 0 || email.validity.valid;
-
-window.addEventListener('load', () => {
-	email.className = emailIsValid ? 'valid' : 'invalid';
-})
-
-email.addEventListener('input', (e) => {
-  if (emailIsValid) {
-    emailError.textContent = '';
-    emailError.className = 'error';
+// Promise
+const willIGetNewPhone = new Promise((resolve, reject) => {
+  if (isMomHappy) {
+    const phone = {
+      brand: 'Samsung',
+      color: 'black',
+    };
+    resolve(phone);
   } else {
-    showError();
+    const reason = new Error('mom is not happy');
+    reject(reason);
   }
 });
 
-form.addEventListener('submit', (e) => {
-	if (!email.validity.valid) {
-		showError();
-		e.preventDefault();
-	}
-});
-
-const showError = () => {
-	if (email.validity.valueMissing) {
-		emailError.textContent = 'You need to enter an email address.';
-	} else if (email.validity.typeMismatch) {
-		emailError.textContent = 'Entered value needs to be an email address.';
-	} else if (email.validity.tooShort) {
-		emailError.textContent = `Email should be at least ${email.minLength} characters; you entered
-		${email.value.length}.`;
-	}
-	emailError.className = 'error active';
+async function showOff(phone) {
+  return new Promise((resolve, reject) => {
+    const message = `Hey friend, I have a new ${phone.color} ${phone.brand} phone!`;
+    resolve(message);
+  });
 }
+
+async function askMom() {
+	try {
+		console.log('before asking mom');
+
+		let phone = await willIGetNewPhone;
+		let message = await showOff(phone);
+
+		console.log(message);
+		console.log('after asking mom');
+	}
+	catch (error) {
+		console.log(error.message);
+	}
+};
+
+(async () => {
+	await askMom();
+})();
