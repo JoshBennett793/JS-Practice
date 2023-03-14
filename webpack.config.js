@@ -5,8 +5,6 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
-    menu: './src/menu.js',
-    carousel: './src/carousel.js',
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -16,7 +14,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'JavaScript Practice',
+      title: 'Form Validation',
       template: './src/index.html',
     }),
   ],

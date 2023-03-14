@@ -1,59 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
-    <meta charset="utf-8" />
-    <title>JavaScript Practice</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Form Validation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+		<link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header>
-      <div id="menu">
-        <div class="menu-title-container">
-          <ul class="menu-options">
-            <li class="menu-title menu-option"><a href="#">Accessories</a></li>
-          </ul>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="feather feather-chevron-left"
-          >
-            <polyline points="15 18 9 12 15 6"></polyline>
-          </svg>
-        </div>
-        <div class="drop-down-container">
-          <ul class="menu-options">
-            <li class="menu-option" data-id="1">
-              <a href="#">Browse Books</a>
-            </li>
-            <li class="menu-option" data-id="2">
-              <a href="#">Special Values</a>
-            </li>
-            <li class="menu-option" data-id="3">
-              <a href="#">Special Collections</a>
-            </li>
-            <li class="menu-option" data-id="4"><a href="#">Subjects</a></li>
-          </ul>
-        </div>
-      </div>
-    </header>
-		<main>
-			<p id="left-arrow" class="arrow"><</p>
-			<div id="carousel-frame">
-				<div id="carousel-slider">
-					<img src="../assets/fishing-1.jpg" alt="Fishing 1">
-					<img src="../assets/fishing-2.jpg" alt="Fishing 2">
-					<img src="../assets/fishing-3.jpg" alt="Fishing 3">
-					<img src="../assets/fishing-4.jpg" alt="Fishing 4">
-				</div>
-			</div>
-			<p id="right-arrow" class="arrow">></p>
-		</main>
+    <form novalidate>
+      <p>
+				<label for="mail">
+					<span>Please enter an email address:</span>
+					<input type="email" name="mail" id="mail" required minlength="8" />
+					<span class="error" aria-live="polite"></span>
+				</label>
+			</p>
+			<button>Submit</button>
+    </form>
   </body>
 </html>
